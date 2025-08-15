@@ -9,7 +9,7 @@ public static void main (String [] args) {
 }
 	public static boolean isPerfect(int n,int i,int sum) {
 		if(i>n/2) return n==sum;
-		sum+=i;
+		if(n%i==0) sum+=i;
 		return isPerfect(n,i+1,sum);
 	}
 }
